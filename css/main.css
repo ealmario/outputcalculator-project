@@ -137,8 +137,9 @@ textarea {
   }
 
   .left-side, .right-side{
-    display: block;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 10px auto;
     width: 100%;
   }
@@ -207,6 +208,23 @@ textarea {
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
+  }
+
+  footer {
+    display: none;
+    font-size: 0.5rem;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  /*Disabling Spinners*/
+
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
   }
 /* ==========================================================================
    Helper classes
@@ -305,12 +323,12 @@ textarea {
 
   .main-wrapper{
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     font-size: 1.5rem;
   }
 
   .left-side, .right-side{
-    display: inline-block;
+    display: block;
     width: 48%;
   }
 
@@ -342,27 +360,39 @@ textarea {
     margin: 0 auto;
     text-align: center;
   }
+
+  footer {
+    display: block;
+    font-size: 0.75rem;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 992px) {
   /* Desktop Styles */
-
   header h1{
-    font-size: 3rem;
+    font-size: 5rem;
   }
 
   .main-wrapper{
     display: flex;
-    flex-flow: row nowrap;
-    font-size: 1.25rem;
+    flex-flow: row wrap;
+    font-size: 1.5rem;
   }
 
   input{
     font-size: 1.25rem;
   }
 
+  .button-wrapper{
+    width: 100%;
+  }
+
   .button-wrapper button{
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   
   .output-wrapper{
@@ -372,7 +402,7 @@ textarea {
   }
 
   .output-area p{
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
 @media print,

@@ -40,7 +40,7 @@
         </div>
 
         <div class="right-side">
-          <input id="totalFootage" type="number" name="total-footage" placeholder="e.g. 30"/>
+          <input id="totalFootage" type="number" name="total-footage" placeholder="e.g. 30" onfocus="this.value=''"/>
         </div>
 
         <div class="left-side">
@@ -48,21 +48,25 @@
         </div>
     
         <div class="right-side">
-          <input id="showRate" type="number" name="show-rate" placeholder="e.g. 500"/>
+          <input id="showRate" type="number" name="show-rate" placeholder="e.g. 500" onfocus="this.value=''"/>
         </div>
 
         <div class="button-wrapper">
-          <button id="calculateBtn">Calculate</button>
+          <button id="calculate-button">Calculate</button>
         </div>
 
         <div class="output-wrapper">
           <label for="output-area">Taxed Output:</label>
           <div class="output-area">
-            <p class="output-p" id="output"></p>
+            <p class="output-p" id="output">PHP 0</p>
           </div>
         </div>
       </main>
     </div>
+
+    <footer>
+      <p>&copy; Eli Almario 2019</p>
+    </footer>
   </div>
 
 

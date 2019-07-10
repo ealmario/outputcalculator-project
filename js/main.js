@@ -1,9 +1,9 @@
-var calculateBtn = document.getElementById("calculateBtn");
-var output = document.getElementById("output");
-
 function calculateOutput (totalFootage, showRate) {
-    var totalFootage = document.getElementById("totalFootage").value;
-    var showRate = document.getElementById("showRate").value;
+    var output = document.getElementById("output");
+    var totalFootage = document.querySelector('input[name="total-footage"]').value;
+    var showRate = document.querySelector("input[name='show-rate']").value;
+
+
     // initial output
 
         var initialOutput = totalFootage * showRate;
@@ -16,8 +16,7 @@ function calculateOutput (totalFootage, showRate) {
    
        var outputText = "php " + finalOutput;
 
-       output.innerText = outputText;
-
+       output.innerText = outputText;   
 }
 
-calculateBtn.addEventListener("click", calculateOutput());
+document.getElementById('calculate-button').addEventListener('click', calculateOutput);
