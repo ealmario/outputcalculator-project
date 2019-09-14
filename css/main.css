@@ -90,7 +90,7 @@ textarea {
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
-  color: #000;
+  color: #0b0b0b;
   padding: 0.2em 0;
 }
 
@@ -163,27 +163,30 @@ textarea {
     justify-content: center;
   }
 
-  .button-wrapper button{
+  .btn-design{
     background: #06A77D;
     border: none;
     border-radius: 60px;
     color: #FBFEF9;
     cursor: pointer;
     font-family: Cairo, sans-serif;
-    font-size: 1.125rem;
     font-weight: 700;
-    letter-spacing: 2px;
     text-transform: uppercase;
     text-align: center;
-    padding: 1.25rem 2.5rem;
   }  
   
-  .button-wrapper button:hover{
+  .btn-design:hover{
     background: #33B794;
   }
 
-  .button-wrapper button:active{
+  .btn-design:active{
     background: #058967;
+  }
+
+  .button-wrapper .btn-design{
+    font-size: 1.125rem;
+    letter-spacing: 2px;
+    padding: 1.25rem 2.5rem;
   }
 
   .output-wrapper{
@@ -203,7 +206,7 @@ textarea {
 
 
   .output-area p{
-    color: #000;
+    color: #0b0b0b;
     font-size: 1.5rem;
     font-weight: 700;
     text-align: center;
@@ -211,12 +214,53 @@ textarea {
   }
 
   footer {
-    display: none;
-    font-size: 0.5rem;
+    display: block;
+    font-size: 0.75rem;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
     width: 100%;
+  }
+
+  /* Alert Message */
+  .alert-msg-box{
+   display: none;
+   justify-content: center;
+   align-items: center;
+   position: fixed;
+   top:0;
+   height: 100%;
+   width: 100%;
+   margin: 0;
+   background: rgba(0,0,0, 0.5);
+   z-index: 1;
+  }
+
+  .alert-msg{
+    display: block;
+    background: #FBFEF9;
+    border-radius: 5px;
+    color: #0b0b0b;
+    height: auto;
+    width: 300px;
+    padding: 10px;
+    position: relative;
+    transition: all 0.1s linear 0s;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .alert-msg p {
+    font-size: 1.25rem;
+  }
+
+  .alert-msg-box .btn-design{
+    font-weight: 700;
+    padding: 0.5rem 2rem;
+  }
+
+  .alert-msg-box button{
+    margin-top: 0.5rem;
   }
 
   /*Disabling Spinners*/
@@ -361,14 +405,6 @@ textarea {
     text-align: center;
   }
 
-  footer {
-    display: block;
-    font-size: 0.75rem;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -423,7 +459,7 @@ textarea {
   *:before,
   *:after {
     background: transparent !important;
-    color: #000 !important;
+    color: #0b0b0b !important;
     /* Black prints faster */
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
